@@ -3,7 +3,7 @@
 class Head
 {
     int m_numear;
-    int m_numnose; 
+    int m_numnose;
     int m_numeye;
     int m_nummouth;
  public:   
