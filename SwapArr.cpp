@@ -41,6 +41,6 @@ int main()
     PrintArr(arr, n);
     Swap(arr, n);
     std::cout << std::endl;
-    printarr(arr, n);
+    PrintArr(arr, n);
     return 0;
 }

@@ -3,7 +3,7 @@
 class Head
 {
     int m_numear;
-    int m_numnose; 
+    int m_numnose;
     int m_numeye;
     int m_nummouth;
  public:   
@@ -64,7 +64,7 @@ public:
     }
     void voice () override
     {
-         std::cout << "I am an Lion" << std::endl;    
+         std::cout << "I am a Lion" << std::endl;    
     }
 };
 
@@ -81,7 +81,7 @@ public:
     }
     void voice () override
     {
-         std::cout << "I am an Bear" << std::endl;    
+         std::cout << "I am a Bear" << std::endl;    
     }    
 };
 
@@ -98,7 +98,7 @@ public:
     }
     void voice () override
     {
-         std::cout << "I am an Wolf" << std::endl;    
+         std::cout << "I am a Wolf" << std::endl;    
     }    
 };
 
@@ -115,7 +115,7 @@ public:
     }
     void voice () override
     {
-        std::cout << "I am an Dog" << std::endl;    
+        std::cout << "I am a Dog" << std::endl;    
     }    
 };
 
@@ -132,7 +132,7 @@ public:
     }
     void voice () override
     {
-    std::cout << "I am an Fish" << std::endl;     
+    std::cout << "I am a Fish" << std::endl;     
     }
 };
 
