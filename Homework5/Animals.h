@@ -1,11 +1,10 @@
 #ifndef ANIMALS_H
 #define ANIMALS_H
-
 class Animals 
 {
 private:
-    double weight;
-    int age;    
+    double m_weight;
+    int m_age;    
 public:
     Animals();
     virtual ~Animals();
