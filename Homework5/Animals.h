@@ -4,8 +4,8 @@
 class Animals 
 {
 private:
-    double weight;
-    int age;    
+    double m_weight;
+    int m_age;    
 public:
     Animals();
     virtual ~Animals();
