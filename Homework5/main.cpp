@@ -20,7 +20,9 @@ int main()
     for(int i = 0; i < size; ++i)
     {
         delete animal[i];
+        animal[i] = nullptr;
     }
     delete[] animal;
+    animal = nullptr;
     return 0;
 }
