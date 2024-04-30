@@ -5,7 +5,7 @@
 #include "Fish.h"
 
 int main()
-{
+{    
     const int size = 5;
     Animals** animal = new Animals* [size];
     animal[0] = new Lion ();
