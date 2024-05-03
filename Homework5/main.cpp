@@ -5,7 +5,7 @@
 #include "Fish.h"
 
 int main()
-{
+{    
     const int size = 5;
     Animals** animal = new Animals* [size];
     animal[0] = new Lion ();
@@ -20,7 +20,9 @@ int main()
     for(int i = 0; i < size; ++i)
     {
         delete animal[i];
+        animal[i] = nullptr;
     }
     delete[] animal;
+    animal = nullptr;
     return 0;
 }

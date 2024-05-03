@@ -24,7 +24,9 @@ int main()
     for(int i = 0; i < size; ++i)
     {
         delete ptr[i];
+        ptr[i] = nullptr;
     }
     delete[] ptr;
+    ptr = nullptr;
     return 0;
 }
