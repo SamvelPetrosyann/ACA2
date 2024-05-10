@@ -4,7 +4,7 @@
 #include "WaterAnimals.h"
 #include "LandAnimals.h"
 
-class Amphibians: public WaterAnimals, public LandAnimals
+class Amphibians: public virtual WaterAnimals, public virtual LandAnimals
 {
 public:
     Amphibians(int age, double weight, std::string placelive, std::string breathing);
