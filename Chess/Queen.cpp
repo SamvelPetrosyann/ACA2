@@ -1,13 +1,21 @@
 #include "Queen.h"
 
-Queen::Queen(Color color,std::string name) : Figures(color,name ) {}
+Queen::Queen(Color color) : Figures(color )
+{
+    if(color == Color::White)
+    {
+        m_name = "WQ";
+    }
+    else
+    {
+        m_name = "BQ";
+    }
+}
 
 Queen::~Queen() {}
 
 void Queen::ControledSquares(bool** bmat, ChessBoard& board, int a, int b)
 {
-    assert(a >= 0 && a < board.GetSize());
-    assert(b >= 0 && b < board.GetSize());
     for(int i = 1; a + i < board.GetSize() && b + i < board.GetSize(); ++i)
     {
         bmat[a + i][b + i] = true;

@@ -1,13 +1,21 @@
 #include "King.h"
 
-King::King(Color color,std::string name) : Figures(color,name) {}
+King::King(Color color) : Figures(color) 
+{
+    if(color == Color::White)
+    {
+        m_name = "WK";
+    }
+    else
+    {
+        m_name = "BK";
+    }
+}
 
 King::~King() {}
 
 void King::ControledSquares(bool** bmat, ChessBoard& board, int a, int b)
 {
-    assert(a >= 0 && a < board.GetSize());
-    assert(b >= 0 && b < board.GetSize());
     if(a + 1 < board.GetSize())
     {
         bmat[a + 1][b] = true;

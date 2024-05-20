@@ -18,19 +18,11 @@ void FillB(bool** bmat,int size)
         }
     }    
 }
-void PrintB(bool** bmat,int size)
-{
-    for(int i = 0; i < size; ++i)
-    {
-        for(int j = 0; j < size; ++j)
-        {
-            std::cout << bmat[i][j] << '\t';
-        }
-        std::cout << std::endl;
-    }    
-}
 int main()
 {
+    int a, b; 
+    std::cin >> a;
+    std::cin >> b;
     ChessBoard board;
     bool** bmat = new bool* [board.GetSize()];
     for(int i = 0; i < board.GetSize(); ++i)
@@ -40,36 +32,23 @@ int main()
     FillB(bmat,board.GetSize());
     
     
-    Figures* BK = new King(Color::Black, "BK");
-    Figures* WK = new King(Color::White, "Wk");
-    Figures* WQ = new Queen(Color::White, "WQ");
-    Figures* WB = new Bishop(Color::White, "WB");
-    Figures* WN = new Knight(Color::Black, "WN");
-    Figures* WR = new Rook(Color::White, "WR");
-    Figures* WP = new Pawn(Color::White,"WP");
-
-    board.FillBoard(BK, 4, 7);
-    board.FillBoard(WR, 1, 1);
-    board.FillBoard(WK, 0, 7);
-    board.FillBoard(WQ, 1, 7);
-    //board.FillBoard(WB, 6, 1);
-    //board.FillBoard(WN, 7, 3);
-
-    WQ->ControledSquares(bmat, board, 1, 7);
-    WR->ControledSquares(bmat, board, 1, 1);
-    WK->ControledSquares(bmat, board, 4, 7);
+    Figures* BK = new King(Color::Black);
+    Figures* WK = new King(Color::White);
+    Figures* WQ = new Queen(Color::White);
+    Figures* WB = new Bishop(Color::White);
+    Figures* WN = new Knight(Color::Black);
+    Figures* WR = new Rook(Color::White);
+    board.FillBoard(WR,bmat, 1, 1);
+    board.FillBoard(WK,bmat, 2, 7);
+    board.FillBoard(BK,bmat, a, b);
+    board.FillBoard(WQ,bmat, 1, 7);
+    board.FillBoard(WB,bmat, 6, 1);
+    board.FillBoard(WN,bmat, 7, 3);
+    board.TestBMat(bmat);
     std::cout << std::endl;
-    
     board.PrintBoard();
-    board.Test(bmat,0, 7);
-
-    delete BK;
-    delete WR;
-    delete WQ;
-    delete WB;
-    delete WN;
-    delete WP;
-    delete WK;
+    board.Test(bmat, a, b);
+    
     for(int i = 0; i < board.GetSize(); ++i)
     {
        delete[] bmat[i];

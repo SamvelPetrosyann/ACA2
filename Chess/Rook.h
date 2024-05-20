@@ -6,7 +6,7 @@
 class Rook : public Figures
 {
 public:
-    Rook(Color color,std::string name);
+    Rook(Color color);
     ~Rook();
     void ControledSquares(bool** bmat, ChessBoard& board, int a, int b) override;
 };

@@ -6,7 +6,7 @@
 class Knight : public Figures
 {
 public:
-    Knight(Color color,std::string name);
+    Knight(Color color);
     ~Knight();
     void ControledSquares(bool** bmat, ChessBoard& board, int a, int b) override;
 };

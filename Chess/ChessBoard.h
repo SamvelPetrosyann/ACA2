@@ -14,12 +14,14 @@ private:
 public:
     ChessBoard();
     ~ChessBoard();
-    void FillBoard(Figures *fig, int a, int b);
+    void FillBoard(Figures *fig,bool** bmat, int a, int b);
     bool IsBusy(int a, int b);
     int GetSize() const;
     void PrintBoard() const;
     bool IsBK(int a, int b);
     void Test(bool**, int a, int b);
+    void TestBMat(bool** bmat);
+    bool KingAreNotNeighbor(int a, int b);
 
 };
 

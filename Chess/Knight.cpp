@@ -1,13 +1,21 @@
 #include "Knight.h"
 
-Knight::Knight(Color color,std::string name) : Figures(color,name ) {}
+Knight::Knight(Color color) : Figures(color ) 
+{
+    if(color == Color::White)
+    {
+        m_name = "WN";
+    }
+    else
+    {
+        m_name = "BN";
+    }
+}
 
 Knight::~Knight() {}
 
 void Knight::ControledSquares(bool** bmat, ChessBoard& board, int a, int b)
 {
-    assert(a >= 0 && a < board.GetSize());
-    assert(b >= 0 && b < board.GetSize());
     if(a + 2 < board.GetSize())
     {
         if(b + 1 < board.GetSize())

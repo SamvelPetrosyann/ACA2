@@ -6,7 +6,7 @@
 class Bishop : public Figures
 {
 public:
-    Bishop(Color color,std::string name);
+    Bishop(Color color);
     ~Bishop();
     void ControledSquares(bool** bmat, ChessBoard& board, int a, int b) override;
 };

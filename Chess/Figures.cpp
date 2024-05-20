@@ -1,6 +1,6 @@
 #include "Figures.h"
 
-Figures::Figures(Color color,std::string name) : m_color(color), m_name(name) {}
+Figures::Figures(Color color) : m_color(color) {}
 
 Figures::~Figures() {}
 

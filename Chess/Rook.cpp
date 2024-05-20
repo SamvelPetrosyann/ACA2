@@ -1,13 +1,21 @@
 #include "Rook.h"
 
-Rook::Rook(Color color,std::string name) : Figures(color,name ) {}
+Rook::Rook(Color color) : Figures(color ) 
+{
+    if(color == Color::White)
+    {
+        m_name = "WR";
+    }
+    else
+    {
+        m_name = "BR";
+    }    
+}
 
 Rook::~Rook() {}
 
 void Rook::ControledSquares(bool** bmat, ChessBoard& board, int a, int b)
 {
-    assert(a >= 0 && a < board.GetSize());
-    assert(b >= 0 && b < board.GetSize());
     for(int i = 1; a + i < board.GetSize(); ++i)
     {
         bmat[a + i][b] = true;

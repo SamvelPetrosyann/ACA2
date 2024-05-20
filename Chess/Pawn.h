@@ -6,7 +6,7 @@
 class Pawn : public Figures
 {
 public:
-    Pawn(Color color,std::string name);
+    Pawn(Color color);
     ~Pawn();
     void ControledSquares(bool** bmat, ChessBoard& board, int a, int b) override;
 };

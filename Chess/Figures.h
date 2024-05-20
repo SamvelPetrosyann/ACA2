@@ -13,15 +13,16 @@ enum class Color
     White
 };
 
+
 class Figures
 {
-private:
+protected:
     Color m_color;
     std::string m_name;
 
 
 public:
-    Figures(Color color,std::string name);
+    Figures(Color color);
     virtual ~Figures();
     virtual void ControledSquares(bool** bmat, ChessBoard& board, int a, int b) = 0;
     std::string GetName() const;
