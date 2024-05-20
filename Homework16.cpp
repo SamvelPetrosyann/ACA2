@@ -16,7 +16,7 @@ public:
     {
         delete m_name;
     }
-    Animals(Animals&& other) noexcept : m_name(other.m_name), m_age(other.m_age) 
+    Animals(Animals&& other) : m_name(other.m_name), m_age(other.m_age) 
     {
         other.m_name = nullptr;
     }
