@@ -2,6 +2,7 @@
 #define VECTOR_H
 
 #include <iostream>
+#include <initializer_list>
 
 template <typename T>
 class Vector
@@ -12,6 +13,7 @@ private:
     T* m_arr;
 public:
     Vector();
+    Vector(std::initializer_list<T> init);
     ~Vector();
     Vector(const Vector& other);
     Vector(Vector&& other);

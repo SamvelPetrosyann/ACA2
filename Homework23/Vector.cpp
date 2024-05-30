@@ -1,9 +1,20 @@
 #include "Vector.h"
 
+
 template <typename T>
 Vector<T>::Vector() :m_size(0), m_cap(2), m_arr(new T[m_cap])
 {
 
+}
+
+template <typename T>
+Vector<T>::Vector(std::initializer_list<T> init) : m_size(init.size()), m_cap(init.size() * 2), m_arr(new T[m_cap])
+{
+    int i = 0;
+    for(auto elem: init)
+    {
+        m_arr[i++] = elem;
+    }
 }
 
 template <typename T>
