@@ -44,7 +44,6 @@ int main()
     board.FillBoard(WQ,bmat, 1, 7);
     board.FillBoard(WB,bmat, 6, 1);
     board.FillBoard(WN,bmat, 7, 3);
-    board.TestBMat(bmat);
     std::cout << std::endl;
     board.PrintBoard();
     board.Test(bmat, a, b);
