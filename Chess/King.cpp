@@ -1,8 +1,8 @@
 #include "King.h"
 
-King::King(Color color) : Figures(color) 
+King::King(Color color) : Figures(color)
 {
-    if(color == Color::White)
+    if (color == Color::White)
     {
         m_name = "WK";
     }
@@ -16,41 +16,23 @@ King::~King() {}
 
 void King::ControledSquares(bool** bmat, ChessBoard& board, int a, int b)
 {
-    if(a + 1 < board.GetSize())
+    int row;
+    int col;
+    
+    for (int i = -1; i <= 1; ++i) 
     {
-        bmat[a + 1][b] = true;
-        if( b + 1 < board.GetSize())
+        for (int j = -1; j <= 1; ++j) 
         {
-            bmat[a + 1][b + 1] = true;
-        
+            
+            if (i == 0 && j == 0) continue;
+
+            row = a + i;
+            col = b + j;
+            if (row >= 0 && row < board.GetSize() && col >= 0 && col < board.GetSize()) 
+            {
+                bmat[row][col] = true;
+            }
         }
-        if(b - 1 >= 0)
-        {
-            bmat[a + 1][b - 1] = true;
-        } 
-    }
-
-    if(a - 1 >= 0)
-    {
-        bmat[a - 1][b] = true;
-        if( b + 1 < board.GetSize())
-        {
-            bmat[a - 1][b + 1] = true;
-        
-        }
-        if(b - 1 >= 0)
-        {
-            bmat[a - 1][b - 1] = true;
-        } 
-    }
-
-    if(b + 1 < board.GetSize())
-    {
-        bmat[a][b + 1] = true;
-    }
-
-    if(b - 1 >= 0)
-    {
-        bmat[a][b - 1] = true;
     }
 }
+
