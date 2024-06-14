@@ -131,9 +131,9 @@
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\Users\\Smart\\Desktop\\ACA\\Chess\\main.cpp",
               "RelativeDocumentMoniker": "main.cpp",
-              "ToolTip": "C:\\Users\\Smart\\Desktop\\ACA\\Chess\\main.cpp",
-              "RelativeToolTip": "main.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAAAAAAA",
+              "ToolTip": "C:\\Users\\Smart\\Desktop\\ACA\\Chess\\main.cpp*",
+              "RelativeToolTip": "main.cpp*",
+              "ViewState": "AQIAADYAAAAAAAAAAAAIwBwAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-05-16T19:54:06.173Z",
               "EditorCaption": ""
@@ -172,8 +172,7 @@
               "RelativeToolTip": "Queen.h",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-05-16T19:54:06.626Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-16T19:54:06.626Z"
             },
             {
               "$type": "Document",
