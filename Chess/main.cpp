@@ -1,4 +1,4 @@
-
+ 
 #include "Figures.h"
 #include "ChessBoard.h"
 #include "Queen.h"
