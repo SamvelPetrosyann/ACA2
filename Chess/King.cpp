@@ -7,7 +7,7 @@ King::King(Color color) : Figures(color)
         m_name = "WK";
     }
     else
-    {
+    { 
         m_name = "BK";
     }
 }
