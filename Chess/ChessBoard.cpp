@@ -1,5 +1,5 @@
 #include "ChessBoard.h"
-
+ 
 ChessBoard::ChessBoard()
 {
     mat = new Figures * *[m_size];
