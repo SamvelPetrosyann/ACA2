@@ -36,7 +36,7 @@ int main()
     Figures* WK = new King(Color::White);
     Figures* WQ = new Queen(Color::White);
     Figures* WB = new Bishop(Color::White);
-    Figures* WN = new Knight(Color::Black);
+    Figures* WN = new Knight(Color::White);
     Figures* WR = new Rook(Color::White);
     board.FillBoard(WR,bmat, 1, 1);
     board.FillBoard(WK,bmat, 2, 7);
