@@ -5,23 +5,8 @@
 int main()
 {
     Vector<int> v = {1, 2, 3, 4, 5};
-    v.push_front(7);
-    v.PrintVector();
-    v.pop_back();
-    std::cout << std::endl;
-    v.PrintVector();
-    v.pop_front();
-    std::cout << std::endl;
-    v.PrintVector();
-    v.insert(5,2);
-    std::cout << std::endl;
-    v.PrintVector();
-    v.resize(9);
-    std::cout << std::endl;
-    v.PrintVector();
-    v.reserve(6);
-    std::cout << std::endl;
-    v.PrintVector();
+    
+    std::cout << v.at(8);
     
     
     return 0;

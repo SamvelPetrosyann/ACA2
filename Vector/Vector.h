@@ -27,6 +27,7 @@ public:
     Vector& operator=(const Vector& other);
     Vector& operator=(Vector&& other);
     void PrintVector() const;
+    T at(int index) const;
 };
 
 #endif // VECTOR_H

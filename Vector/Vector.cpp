@@ -295,6 +295,23 @@ void Vector<T>::reserve(int n)
     }
 }
 
+template <typename T>
+T Vector<T>::at(int index) const 
+{
+    try
+    {
+        if(index < 0 || index >= m_size)
+        {
+            throw std::invalid_argument("index out of range ");
+        }
+        return m_arr[index];
+    } 
+    catch(const std::invalid_argument& e)
+    {
+        std::cerr << e.what() << index << std::endl;
+        throw;
+    }
+}
 
 template class Vector<int>;
 template class Vector<float>;
