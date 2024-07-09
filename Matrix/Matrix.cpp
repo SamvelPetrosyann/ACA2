@@ -76,17 +76,9 @@ Matrix& Matrix::operator=(const Matrix& other)
 
 int Matrix::at(int row, int col)
 {
-    try
-    {
         if(row < 0 || row >= m_rows || col < 0 || col >= m_cols)
         {
             throw std::out_of_range("index out of range");
         }
         return m_mat[row][col];
-    } 
-    catch(const std::out_of_range& e)
-    {
-        std::cerr << e.what() << std::endl;
-        throw;
-    }
 }
