@@ -6,7 +6,7 @@
 
 class Matrix
 {
-private:
+private: 
 	int m_rows;
 	int m_cols;
 	int** m_mat;
